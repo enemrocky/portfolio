@@ -1,60 +1,29 @@
 import { Link, NavLink } from "react-router-dom";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
 	return (
-		<footer className="shadow-lg">
+		<footer className="shadow-lg py-8">
 			<div className="flex justify-between align-middle lg:w-4/5 mx-auto">
 				<Link to="/">
-					<img
-						className="h-24 w-52"
-						src="https://miro.medium.com/v2/resize:fit:786/format:webp/1*CZ6reUGSlxCxAzls5ikGkQ.png"
-						alt=""
-					/>
+					<p>All rights reserved, @ 2024 Enemrocky</p>
 				</Link>
 				<ul className="flex gap-5 my-auto">
 					<li className="font-semibold uppercase text-lg">
-						<NavLink
-							to="/"
-							className={({ isActive }) =>
-								isActive ? "text-green-500" : "text-gray-600"
-							}>
-							Home
+						<NavLink to="/">
+							<FaLinkedin />
 						</NavLink>
 					</li>
 					<li className="font-semibold uppercase text-lg">
-						<NavLink
-							to="/about"
-							className={({ isActive }) =>
-								isActive ? "text-green-500" : "text-gray-600"
-							}>
-							About
+						<NavLink to="/about">
+							<FaGithub />
 						</NavLink>
 					</li>
 					<li className="font-semibold uppercase text-lg">
-						<NavLink
-							to="/contact"
-							className={({ isActive }) =>
-								isActive ? "text-green-500" : "text-gray-600"
-							}>
-							Contact
-						</NavLink>
-					</li>
-					<li className="font-semibold uppercase text-lg">
-						<NavLink
-							to="/Github"
-							className={({ isActive }) =>
-								isActive ? "text-green-500" : "text-gray-600"
-							}>
-							Github Preview
-						</NavLink>
-					</li>
-					<li className="font-semibold uppercase text-lg">
-						<NavLink
-							to="/Projects"
-							className={({ isActive }) =>
-								isActive ? "text-green-500" : "text-gray-600"
-							}>
-							Projects
+						<NavLink to="/contact">
+							<FaXTwitter />
 						</NavLink>
 					</li>
 				</ul>
