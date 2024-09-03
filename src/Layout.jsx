@@ -1,3 +1,4 @@
+import { LinkURLProvider } from "./components/CONTEXT/LinkURLProvider";
 import { Outlet } from "react-router-dom";
 import Header from "./components/UI/Nav";
 import Footer from "./components/UI/Footer";
@@ -5,9 +6,11 @@ import Footer from "./components/UI/Footer";
 const Layout = () => {
 	return (
 		<div>
-			<Header />
-			<Outlet />
-			<Footer />
+			<LinkURLProvider>
+				<Header />
+				<Outlet />
+				<Footer />
+			</LinkURLProvider>
 		</div>
 	);
 };

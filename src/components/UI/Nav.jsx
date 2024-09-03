@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
+import { FiDownload } from "react-icons/fi";
 
 const Nav = () => {
 	return (
@@ -7,7 +8,7 @@ const Nav = () => {
 				<Link to="/">
 					<img
 						className="h-24 w-52"
-						src="https://miro.medium.com/v2/resize:fit:786/format:webp/1*CZ6reUGSlxCxAzls5ikGkQ.png"
+						src="https://miro.medium.com/v2/resize:fit:786/format:webp/1*CZ6reUGSlxCxAzls5ikGkQ.png" //put logo url in context
 						alt=""
 					/>
 				</Link>
@@ -58,6 +59,9 @@ const Nav = () => {
 						</NavLink>
 					</li>
 				</ul>
+				<button className="flex h-fit my-auto gap-2 font-semibold bg-green-400 text-white px-5 py-3 rounded-lg">
+					CV <FiDownload className="mt-1" />
+				</button>
 			</div>
 		</nav>
 	);
