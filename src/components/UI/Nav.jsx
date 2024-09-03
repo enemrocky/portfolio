@@ -12,8 +12,8 @@ const Nav = () => {
 						alt=""
 					/>
 				</Link>
-				<ul className="flex gap-5 my-auto">
-					<li className="font-semibold uppercase text-lg">
+				<ul className="flex font-semibold uppercase gap-5 my-auto text-lg">
+					<li>
 						<NavLink
 							to="/"
 							className={({ isActive }) =>
@@ -22,7 +22,7 @@ const Nav = () => {
 							Home
 						</NavLink>
 					</li>
-					<li className="font-semibold uppercase text-lg">
+					<li>
 						<NavLink
 							to="/about"
 							className={({ isActive }) =>
@@ -31,7 +31,7 @@ const Nav = () => {
 							About
 						</NavLink>
 					</li>
-					<li className="font-semibold uppercase text-lg">
+					<li>
 						<NavLink
 							to="/contact"
 							className={({ isActive }) =>
@@ -40,7 +40,7 @@ const Nav = () => {
 							Contact
 						</NavLink>
 					</li>
-					<li className="font-semibold uppercase text-lg">
+					<li>
 						<NavLink
 							to="/Github"
 							className={({ isActive }) =>
@@ -49,7 +49,7 @@ const Nav = () => {
 							Github Preview
 						</NavLink>
 					</li>
-					<li className="font-semibold uppercase text-lg">
+					<li>
 						<NavLink
 							to="/Projects"
 							className={({ isActive }) =>

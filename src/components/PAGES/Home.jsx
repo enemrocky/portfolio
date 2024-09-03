@@ -14,22 +14,22 @@ const Home = () => {
 			<div className="mx-auto -mt-80 text-4xl">
 				<p>hi my name is ENEMROCKY</p>
 			</div>
-			<ul className="flex flex-col gap-3 absolute right-0 mr-12 text-3xl">
-				<li className="font-semibold uppercase">
+			<ul className="flex font-semibold uppercase flex-col gap-3 absolute right-0 mr-12 text-3xl">
+				<li>
 					<abbr title="LinkedIn">
 						<NavLink to={linkedInURL} target="_blank">
 							<FaLinkedin />
 						</NavLink>
 					</abbr>
 				</li>
-				<li className="font-semibold uppercase">
+				<li>
 					<abbr title="Github">
 						<NavLink to={githubURL} target="_blank">
 							<FaGithub />
 						</NavLink>
 					</abbr>
 				</li>
-				<li className="font-semibold uppercase">
+				<li>
 					<abbr title="Twitter">
 						<NavLink to={xTwitterURL} target="_blank">
 							<FaXTwitter />
