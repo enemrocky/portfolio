@@ -4,10 +4,10 @@ import { FiDownload } from "react-icons/fi";
 const Nav = () => {
 	return (
 		<nav className="shadow-lg">
-			<div className="flex justify-between align-middle lg:w-4/5 mx-auto">
+			<div className="flex justify-between align-middle lg:w-4/5 mx-auto py-4">
 				<Link to="/">
 					<img
-						className="h-24 w-52"
+						className="h-18 w-32"
 						src="https://miro.medium.com/v2/resize:fit:786/format:webp/1*CZ6reUGSlxCxAzls5ikGkQ.png" //put logo url in context
 						alt=""
 					/>
