@@ -4,6 +4,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { useContext } from "react";
 import { LinkURLContext } from "../CONTEXT/LinkURLContext";
 import About from "./About";
+import Contact from "./Contact";
 
 const Home = () => {
 	const { linkedInURL } = useContext(LinkURLContext);
@@ -41,6 +42,7 @@ const Home = () => {
 				</ul>
 			</div>
 			<About /> {/* show all the pages in the home page*/}
+			<Contact /> {/* show all the pages in the home page*/}
 		</>
 	);
 };

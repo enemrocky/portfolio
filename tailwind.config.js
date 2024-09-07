@@ -6,6 +6,11 @@ export default {
 			backgroundImage: {
 				showcase: `url("https://images.pexels.com/photos/15005252/pexels-photo-15005252/free-photo-of-green-plant-leaves.jpeg?auto=compress&cs=tinysrgb&w=600")`,
 			},
+			boxShadow: {
+				md: ".5px .5px 5px .5px rgba(0, 0, 0, 0.1)",
+				lg: "1px 1px 10px 1px rgba(0, 0, 0, 0.1)",
+				xl: "2px 2px 10px 2px rgba(0, 0, 0, 0.1)",
+			},
 		},
 	},
 	plugins: [],

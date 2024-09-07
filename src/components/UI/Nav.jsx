@@ -6,6 +6,18 @@ const Nav = () => {
 		<nav className="shadow-lg">
 			<div className="flex justify-between align-middle lg:w-4/5 mx-auto py-4">
 				<Link to="/">
+					<svg
+						className="block h-6 w-6"
+						fill="none"
+						viewBox="0 0 24 24"
+						strokeWidth="1.5"
+						stroke="currentColor">
+						<path
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+						/>
+					</svg>
 					<img
 						className="h-18 w-32"
 						src="https://miro.medium.com/v2/resize:fit:786/format:webp/1*CZ6reUGSlxCxAzls5ikGkQ.png" //put logo url in context

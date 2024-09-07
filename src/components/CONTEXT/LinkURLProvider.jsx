@@ -19,5 +19,5 @@ export const LinkURLProvider = ({ children }) => {
 };
 
 LinkURLProvider.propTypes = {
-	children: PropTypes.instanceOf,
+	children: PropTypes.any.isRequired,
 };
