@@ -8,29 +8,29 @@ const ContactForm = () => {
 
 	// State to track errors
 	const [errors, setErrors] = useState({});
+	const [success, setSuccess] = useState(false);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
-		// Reset errors
+		//Error handling
 		setErrors({});
 
-		// Validate form
+		// Validate each input field
 		let formErrors = {};
-		if (!name) formErrors.name = "Name is required";
-		if (!email) formErrors.email = "Email is required";
-		if (!subject) formErrors.subject = "Subject is required";
-		if (!message) formErrors.message = "Message is required";
+		if (!name) formErrors.name = "Enter name";
+		if (!email) formErrors.email = "Email is not valid";
+		if (!subject) formErrors.subject = "Enter subject";
+		if (!message) formErrors.message = "Enter message";
 
-		// If there are errors, do not submit the form
+		// Check if there are errors
 		if (Object.keys(formErrors).length > 0) {
 			setErrors(formErrors);
 			return;
+		} else {
+			setSuccess(!success);
 		}
 
-		console.log("Form sent");
-
-		// Clear form
 		setName("");
 		setEmail("");
 		setSubject("");
@@ -39,13 +39,13 @@ const ContactForm = () => {
 
 	return (
 		<form
-			className="flex flex-col w-1/2 gap-3 mx-auto mt-10 py-8 px-16 rounded-xl shadow-lg"
+			className="flex flex-col w-4/5 lg:w-1/2 gap-3 mx-auto lg:mt-10 py-8 px-6 md:px-10 lg:px-16 rounded-xl shadow-lg"
 			onSubmit={handleSubmit}>
 			<h2 className="text-gray-600 text-2xl mb-8">
 				Send your message through this form
 			</h2>
 			<div className="lg:flex justify-between gap-8">
-				<div className="lg:w-1/2">
+				<div className="lg:w-1/2 sm:mb-3">
 					<label htmlFor="name">Name</label>
 					<input
 						type="text"
@@ -53,11 +53,9 @@ const ContactForm = () => {
 						value={name}
 						onChange={(e) => setName(e.target.value)}
 						className={`w-full py-1.5 px-3 rounded-lg border-2 outline-none ${
-							errors.name
-								? "border-red-500 placeholder-red-500"
-								: ""
+							errors.name && "border-red-500 placeholder-red-500"
 						}`}
-						placeholder={errors.name ? errors.name : ""}
+						placeholder={errors.name && errors.name}
 					/>
 				</div>
 				<div className="lg:w-1/2">
@@ -68,11 +66,9 @@ const ContactForm = () => {
 						value={email}
 						onChange={(e) => setEmail(e.target.value)}
 						className={`w-full py-1.5 px-3 rounded-lg border-2 outline-none ${
-							errors.email
-								? "border-red-500 placeholder-red-500"
-								: ""
+							errors.email && "border-red-500 placeholder-red-500"
 						}`}
-						placeholder={errors.email ? errors.email : ""}
+						placeholder={errors.email && errors.email}
 					/>
 				</div>
 			</div>
@@ -84,30 +80,30 @@ const ContactForm = () => {
 					value={subject}
 					onChange={(e) => setSubject(e.target.value)}
 					className={`w-full py-1.5 px-3 rounded-lg border-2 outline-none ${
-						errors.subject
-							? "border-red-500 placeholder-red-500"
-							: ""
+						errors.subject && "border-red-500 placeholder-red-500"
 					}`}
-					placeholder={errors.subject ? errors.subject : ""}
+					placeholder={errors.subject && errors.subject}
 				/>
 			</div>
-			<div className="mb-10">
+			<div className="mb-8">
 				<label htmlFor="message">Message</label>
 				<textarea
 					id="message"
 					value={message}
 					onChange={(e) => setMessage(e.target.value)}
 					className={`w-full py-1.5 px-3 rounded-lg border-2 outline-none ${
-						errors.message
-							? "border-red-500 placeholder-red-500"
-							: ""
+						errors.message && "border-red-500 placeholder-red-500"
 					}`}
-					placeholder={errors.message ? errors.message : ""}
+					placeholder={errors.message && errors.message}
 				/>
 			</div>
-			<button className="py-2 px-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
-				Send
-			</button>
+			{success ? (
+				<p className="text-center text-green-500">Message sent</p>
+			) : (
+				<button className="py-2 px-4 bg-green-500 text-white rounded-lg hover:bg-green-600">
+					Send
+				</button>
+			)}
 		</form>
 	);
 };

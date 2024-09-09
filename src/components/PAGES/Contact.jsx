@@ -8,8 +8,8 @@ const Contact = () => {
 			<div className="flex flex-col gap-10 mb-16">
 				<h1 className="text-5xl text-center mt-10">Get in touch</h1>
 
-				<div className="mx-auto">
-					<div className="flex justify-between gap-4">
+				<div className="w-4/5 lg:w-fit mx-auto">
+					<div className="lg:flex justify-between gap-6">
 						<ContactCard title="phone" body="078 178 5298" />
 						<ContactCard
 							title="email"

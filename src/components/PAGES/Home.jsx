@@ -17,7 +17,7 @@ const Home = () => {
 				<div className="mx-auto -mt-80 text-4xl">
 					<p>hi my name is ENEMROCKY</p>
 				</div>
-				<ul className="flex font-semibold uppercase flex-col gap-3 absolute right-0 mr-12 text-3xl">
+				<ul className="hidden lg:flex font-semibold uppercase flex-col gap-3 absolute right-0 mr-12 text-3xl">
 					<li>
 						<abbr title="LinkedIn">
 							<NavLink to={linkedInURL} target="_blank">
