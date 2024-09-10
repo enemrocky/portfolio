@@ -10,7 +10,7 @@ const Github = () => {
 	// 			.then((data) => setName(data.name)),
 	// 	[]
 	// );
-	return <div>Github</div>;
+	return <div>{/* github  importants */}</div>;
 };
 
 export default Github;
