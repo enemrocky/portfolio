@@ -46,11 +46,11 @@ const Nav = () => {
 					</li>
 					<li>
 						<NavLink
-							to="/contact"
+							to="/Projects"
 							className={({ isActive }) =>
 								isActive ? "text-green-500" : "text-gray-600"
 							}>
-							Contact
+							Projects
 						</NavLink>
 					</li>
 					<li>
@@ -64,11 +64,11 @@ const Nav = () => {
 					</li>
 					<li>
 						<NavLink
-							to="/Projects"
+							to="/contact"
 							className={({ isActive }) =>
 								isActive ? "text-green-500" : "text-gray-600"
 							}>
-							Projects
+							Contact
 						</NavLink>
 					</li>
 				</ul>

@@ -16,7 +16,7 @@ const Github = () => {
 				className="rounded-full w-80 shadow-xl mx-auto"
 			/>
 			<div className="w-80 mb-8 mt-4 capitalize mx-auto">
-				<h1 className="mb-1 font-semibold text-lg">{githubNameURL}</h1>
+				<h1 className="mb-2 font-semibold text-2xl">{githubNameURL}</h1>
 				<NavLink
 					to={githubReposURL}
 					target="_blank"
