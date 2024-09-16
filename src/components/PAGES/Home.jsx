@@ -42,9 +42,9 @@ const Home = () => {
 					</li>
 				</ul>
 			</div>
-			<About /> {/* show all the pages in the home page*/}
-			<Github /> {/* show all the pages in the home page*/}
-			<Contact /> {/* show all the pages in the home page*/}
+			{/* <About /> show all the pages in the home page */}
+			{/* <Github /> show all the pages in the home page */}
+			{/* <Contact /> show all the pages in the home page */}
 		</>
 	);
 };

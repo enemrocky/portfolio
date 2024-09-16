@@ -1,14 +1,26 @@
 import { Link, NavLink } from "react-router-dom";
 import { FiDownload } from "react-icons/fi";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { LinkURLContext } from "../CONTEXT/LinkURLContext";
 
 const Nav = () => {
 	const [showLinks, setShowLinks] = useState("hidden");
+	const [isVisible, setIsVisible] = useState(false);
+
+	const { githubAvatarURL } = useContext(LinkURLContext);
+	const { githubURL } = useContext(LinkURLContext);
+
+	// if (!isVisible) {
+	// 	document.addEventListener("click", () => {
+	// 		setShowLinks("hidden");
+	// 	});
+	// }
 
 	// show or hide navlinks on mobile
 	const handleClick = () => {
 		if (showLinks === "hidden") {
 			setShowLinks("block");
+			setIsVisible(true);
 		} else {
 			setShowLinks("hidden");
 		}
@@ -72,9 +84,17 @@ const Nav = () => {
 						</NavLink>
 					</li>
 				</ul>
-				<button className="flex content-center h-fit gap-2 font-semibold bg-green-400 text-white px-5 py-3 rounded-lg my-auto basis-1">
-					CV <FiDownload className="mt-1" />
-				</button>
+				<div className="flex gap-4">
+					<button className="flex content-center h-fit gap-2 font-semibold bg-green-400 text-white px-5 py-3 rounded-lg my-auto basis-1">
+						CV <FiDownload className="mt-1" />
+					</button>
+					<NavLink to={githubURL} target="_blank">
+						<img
+							src={githubAvatarURL}
+							className="rounded-full w-12 shadow-lg mx-auto"
+						/>
+					</NavLink>
+				</div>
 			</div>
 
 			{/* mobile view */}
@@ -90,7 +110,7 @@ const Nav = () => {
 					</Link>
 					<div onClick={handleClick}>
 						<svg
-							className="h-6 w-6"
+							className="h-6 w-6 cursor-pointer"
 							fill="none"
 							viewBox="0 0 24 24"
 							strokeWidth="1.5"
