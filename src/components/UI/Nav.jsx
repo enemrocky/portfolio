@@ -1,43 +1,46 @@
 import { Link, NavLink } from "react-router-dom";
 import { FiDownload } from "react-icons/fi";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { LinkURLContext } from "../CONTEXT/LinkURLContext";
 
 const Nav = () => {
 	const [showLinks, setShowLinks] = useState("hidden");
-	const [isVisible, setIsVisible] = useState(false);
+	const { githubAvatarURL, githubURL, logoURL } = useContext(LinkURLContext);
 
-	const { githubAvatarURL } = useContext(LinkURLContext);
-	const { githubURL } = useContext(LinkURLContext);
-
-	// if showlinks is active then any click on the page show set it to hidden
-
-	if (isVisible) {
-		document.addEventListener("click", () => {
-			setShowLinks("hidden");
-		});
-	}
-
+	// TODO: if showlinks is active then any click on the page show set it to hidden
 	// show or hide navlinks on mobile
-	const handleClick = () => {
-		if (showLinks === "hidden") {
-			setShowLinks("block");
-			setIsVisible(true);
-		} else {
-			setShowLinks("hidden");
-		}
+	const handleClick = (event) => {
+		event.stopPropagation();
+		showLinks === "hidden" ? setShowLinks("block") : setShowLinks("hidden");
 	};
+
+	useEffect(() => {
+		if (showLinks === "block") {
+			// event to hide menu on page click
+			document.addEventListener("click", () => setShowLinks("hidden"));
+
+			// event cleanup fr when component unmounts
+			return () => {
+				document.removeEventListener("click", () =>
+					setShowLinks("hidden")
+				);
+			};
+		}
+	}, [showLinks]);
 
 	return (
 		<nav className="shadow-lg">
 			<div className="flex content-center justify-between lg:w-4/5 mx-auto py-4  max-lg:hidden">
 				<Link to="/" className="my-auto basis-1">
-					{/* <img
-						className="h-18 w-32"
-						src="https://miro.medium.com/v2/resize:fit:786/format:webp/1*CZ6reUGSlxCxAzls5ikGkQ.png" //put logo url in context
-						alt=""
-					/> */}
-					<p className="text-xl">ENEMROCKY</p>
+					{logoURL ? (
+						<img
+							className="h-18 w-32"
+							//TODO: put logo url in context
+							src={logoURL}
+						/>
+					) : (
+						<p className="text-xl">ENEMROCKY</p>
+					)}
 				</Link>
 				<ul className="flex font-semibold uppercase gap-5 text-lg my-auto">
 					<li>
@@ -87,7 +90,7 @@ const Nav = () => {
 					</li>
 				</ul>
 				<div className="flex gap-4">
-					<button className="flex content-center h-fit gap-2 font-semibold bg-green-400 text-white px-5 py-3 rounded-lg my-auto basis-1">
+					<button className="flex h-fit gap-2 font-semibold bg-green-400 text-white px-5 py-3 rounded-lg my-auto basis-1">
 						CV <FiDownload className="mt-1" />
 					</button>
 					<NavLink to={githubURL} target="_blank">
@@ -103,12 +106,15 @@ const Nav = () => {
 			<div className="lg:hidden p-6">
 				<div className="flex content-center justify-between">
 					<Link to="/">
-						{/* <img
-							className="h-18 w-32"
-							src="https://miro.medium.com/v2/resize:fit:786/format:webp/1*CZ6reUGSlxCxAzls5ikGkQ.png" //put logo url in context
-							alt=""
-						/> */}
-						<p>ENEMROCKY</p>
+						{logoURL ? (
+							<img
+								className="h-18 w-32"
+								//TODO: put logo url in context
+								src={logoURL}
+							/>
+						) : (
+							<p className="text-xl">ENEMROCKY</p>
+						)}
 					</Link>
 					<div onClick={handleClick}>
 						<svg

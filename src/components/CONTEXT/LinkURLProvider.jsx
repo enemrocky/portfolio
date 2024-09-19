@@ -19,6 +19,7 @@ export const LinkURLProvider = ({ children }) => {
 	const githubURL = "https://github.com/enemrocky";
 	const xTwitterURL = "https://x.com/Enemrocky";
 	const githubReposURL = "https://github.com/enemrocky?tab=repositories";
+	const logoURL = null;
 
 	return (
 		<LinkURLContext.Provider
@@ -29,6 +30,7 @@ export const LinkURLProvider = ({ children }) => {
 				githubReposURL,
 				githubAvatarURL,
 				githubNameURL,
+				logoURL,
 			}}>
 			{children}
 		</LinkURLContext.Provider>
