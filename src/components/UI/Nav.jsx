@@ -10,11 +10,13 @@ const Nav = () => {
 	const { githubAvatarURL } = useContext(LinkURLContext);
 	const { githubURL } = useContext(LinkURLContext);
 
-	// if (!isVisible) {
-	// 	document.addEventListener("click", () => {
-	// 		setShowLinks("hidden");
-	// 	});
-	// }
+	// if showlinks is active then any click on the page show set it to hidden
+
+	if (isVisible) {
+		document.addEventListener("click", () => {
+			setShowLinks("hidden");
+		});
+	}
 
 	// show or hide navlinks on mobile
 	const handleClick = () => {
