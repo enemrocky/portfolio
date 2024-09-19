@@ -8,7 +8,7 @@ export default {
 			},
 			boxShadow: {
 				md: ".5px .5px 5px .5px rgba(0, 0, 0, 0.1)",
-				lg: "1px 1px 10px 1px rgba(0, 0, 0, 0.1)",
+				lg: ".7px .7px 7px .7px rgba(0, 0, 0, 0.1)",
 				xl: "2px 2px 10px 2px rgba(0, 0, 0, 0.1)",
 			},
 		},

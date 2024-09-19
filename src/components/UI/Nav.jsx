@@ -93,12 +93,14 @@ const Nav = () => {
 					<button className="flex h-fit gap-2 font-semibold bg-green-400 text-white px-5 py-3 rounded-lg my-auto basis-1">
 						CV <FiDownload className="mt-1" />
 					</button>
-					<NavLink to={githubURL} target="_blank">
-						<img
-							src={githubAvatarURL}
-							className="rounded-full w-12 shadow-lg mx-auto"
-						/>
-					</NavLink>
+					{githubAvatarURL ? (
+						<NavLink to={githubURL} target="_blank">
+							<img
+								src={githubAvatarURL}
+								className="rounded-full w-12 shadow-lg mx-auto"
+							/>
+						</NavLink>
+					) : null}
 				</div>
 			</div>
 

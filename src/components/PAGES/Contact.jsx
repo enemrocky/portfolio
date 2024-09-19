@@ -1,5 +1,5 @@
 import ContactForm from "./ContactForm";
-import ContactCard from "../UI/ContactCard";
+import Card from "../UI/ContactCard";
 
 const Contact = () => {
 	//form for feedback
@@ -10,12 +10,9 @@ const Contact = () => {
 
 				<div className="w-4/5 lg:w-fit mx-auto">
 					<div className="lg:flex justify-between gap-6">
-						<ContactCard title="phone" body="078 178 5298" />
-						<ContactCard
-							title="email"
-							body="enemrocky@enemrocky.com"
-						/>
-						<ContactCard title="phone" body="078 178 5298" />
+						<Card title="phone" body="078 178 5298" />
+						<Card title="email" body="enemrocky@enemrocky.com" />
+						<Card title="phone" body="078 178 5298" />
 					</div>
 				</div>
 				<ContactForm />

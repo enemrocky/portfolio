@@ -1,72 +1,49 @@
+import { useContext } from "react";
+import { ImagesContext } from "../CONTEXT/ImagesContext";
+
 const About = () => {
+	const { languagesImage } = useContext(ImagesContext);
+
 	return (
 		//   2skills, 3technologies and 1intro of self
-		<div className="text-center flex flex-col gap-4 mx-auto my-8">
-			<h2 className="text-2xl font-bold"> ⛷ Enemrocky </h2>
 
-			<h3 className="text-xl font-semibold">
+		<div className="text-center flex flex-col gap-4 mx-auto my-8">
+			<h2 className="text-2xl lg:text-4xl font-bold"> ⛷ Enemrocky </h2>
+			<h3 className="text-xl lg:text-3xl font-semibold">
 				Software Engineer / Web Developer
 			</h3>
-
-			<p className="w-3/5 mx-auto leading-8 mb-8">
+			<p className="w-3/5 lg:text-xl mx-auto mt-3 mb-8">
 				Diligent software engineer with heavy focus on front-end modules
 				and processes. Builds beautiful and functional sites using
 				modern technologies like JavaScript, Bootstrap, Html & CSS.
 				Individual who is energetic, achievement-driven, and
 				number-rich.
 			</p>
-
-			<h3 className="text-xl font-semibold mb-2">
+			<h3 className="text-xl lg:text-3xl font-semibold mb-4">
 				🧰 Languages and Tools
 			</h3>
-			<p className="flex mx-auto gap-3">
-				<img
-					alt="HTML"
-					width="90px"
-					src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg"
-				/>
-				<img
-					alt="CSS"
-					width="90px"
-					src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg"
-				/>
-				<img
-					alt="JavaScript"
-					width="90px"
-					src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"
-				/>
-				<img
-					alt="React"
-					width="90px"
-					src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-				/>
-				<img
-					alt="NodeJS"
-					width="90px"
-					src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-				/>
-				<img
-					alt="Python"
-					width="90px"
-					src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-plain.svg"
-				/>
-			</p>
+
+			<div className="flex mx-auto gap-3">
+				{languagesImage.map((image, index) => (
+					<img key={index} width="90px" src={image} />
+				))}
+			</div>
 
 			{/* Bars section */}
 			<section className="my-10">
 				<div className="graphs flex mx-auto justify-between">
 					<div className="left-bars w-1/2 pl-6 lg:pl-32 pr-2 lg:pr-6">
 						{/* <p>React</p> */}
-						<div className="bg-green-300 rounded-md">
-							<div className="bg-green-600 w-1/2 h-3 mb-2 rounded-md"></div>
+						<div className="bg-green-100 rounded-md">
+							<div className="bg-green-400 w-1/2 h-3 mb-2 rounded-md"></div>
 						</div>
 						{/* <p>HtML</p> */}
-						<div className="bg-red-300 rounded-md">
-							<div className="bg-red-600 w-1/2 h-3 mb-2 rounded-md"></div>
+						<div className="bg-red-100 rounded-md">
+							<div className="bg-red-400 w-2/3 h-3 mb-2 rounded-md"></div>
 						</div>
 						{/* <p>CSS</p> */}
-						<div className="bg-blue-300 rounded-md">
-							<div className="bg-blue-600 w-1/2 h-3 rounded-md"></div>
+						<div className="bg-blue-100 rounded-md">
+							<div className="bg-blue-400 w-1/2 h-3 rounded-md"></div>
 						</div>
 					</div>
 
