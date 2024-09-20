@@ -7,7 +7,7 @@ const About = () => {
 	return (
 		//   2skills, 3technologies and 1intro of self
 
-		<div className="text-center flex flex-col gap-4 mx-auto my-8">
+		<div className="text-center flex flex-col gap-6 mx-auto my-16">
 			<h2 className="text-2xl lg:text-4xl font-bold"> ⛷ Enemrocky </h2>
 			<h3 className="text-xl lg:text-3xl font-semibold">
 				Software Engineer / Web Developer
@@ -15,7 +15,7 @@ const About = () => {
 			<p className="w-3/5 lg:text-xl mx-auto mt-3 mb-8">
 				Diligent software engineer with heavy focus on front-end modules
 				and processes. Builds beautiful and functional sites using
-				modern technologies like JavaScript, Bootstrap, Html & CSS.
+				modern technologies like ReactJS, Tailwind, Html & CSS.
 				Individual who is energetic, achievement-driven, and
 				number-rich.
 			</p>
@@ -30,20 +30,24 @@ const About = () => {
 			</div>
 
 			{/* Bars section */}
-			<section className="my-10">
-				<div className="graphs flex mx-auto justify-between">
-					<div className="left-bars w-1/2 pl-6 lg:pl-32 pr-2 lg:pr-6">
-						{/* <p>React</p> */}
-						<div className="bg-green-100 rounded-md">
-							<div className="bg-green-400 w-1/2 h-3 mb-2 rounded-md"></div>
-						</div>
-						{/* <p>HtML</p> */}
+			<section className="my-16">
+				<div className="flex gap-10 mx-auto justify-between lg:px-48">
+					<div className="text-left w-1/2">
+						<p>HtML</p>
 						<div className="bg-red-100 rounded-md">
-							<div className="bg-red-400 w-2/3 h-3 mb-2 rounded-md"></div>
+							<div className="bg-red-400 w-11/12 h-3 mb-4 rounded-md"></div>
 						</div>
-						{/* <p>CSS</p> */}
+						<p>CSS</p>
 						<div className="bg-blue-100 rounded-md">
-							<div className="bg-blue-400 w-1/2 h-3 rounded-md"></div>
+							<div className="bg-blue-400 w-11/12 h-3 mb-4 rounded-md"></div>
+						</div>
+						<p>JS</p>
+						<div className="bg-blue-100 rounded-md">
+							<div className="bg-blue-400 w-10/12 h-3 mb-4 rounded-md"></div>
+						</div>
+						<p>React</p>
+						<div className="bg-green-100 rounded-md">
+							<div className="bg-green-400 w-7/12 h-3 rounded-md"></div>
 						</div>
 					</div>
 

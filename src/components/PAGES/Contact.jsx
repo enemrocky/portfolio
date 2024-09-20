@@ -10,9 +10,9 @@ const Contact = () => {
 
 				<div className="w-4/5 lg:w-fit mx-auto">
 					<div className="lg:flex justify-between gap-6">
-						<Card title="phone" body="078 178 5298" />
-						<Card title="email" body="enemrocky@enemrocky.com" />
-						<Card title="phone" body="078 178 5298" />
+						<Card title="Phone" body="078 178 5298" />
+						<Card title="Email" body="enemrocky@enemrocky.com" />
+						<Card title="Twitter" body="@enemrocky" />
 					</div>
 				</div>
 				<ContactForm />

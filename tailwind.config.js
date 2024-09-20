@@ -11,6 +11,9 @@ export default {
 				lg: ".7px .7px 7px .7px rgba(0, 0, 0, 0.1)",
 				xl: "2px 2px 10px 2px rgba(0, 0, 0, 0.1)",
 			},
+			container: {
+				center: true,
+			},
 		},
 	},
 	plugins: [],

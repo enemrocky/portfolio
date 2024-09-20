@@ -24,7 +24,11 @@ const Github = () => {
 					Visit my repositories
 				</NavLink>
 			</div>
-			<img src={contributions} alt="graph of github contributions" />
+			<img
+				src={contributions}
+				alt="graph of github contributions"
+				className="w-3/5 mx-auto mt-6"
+			/>
 		</div>
 	);
 };

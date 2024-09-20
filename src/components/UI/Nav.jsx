@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import { FiDownload } from "react-icons/fi";
 import { useState, useContext, useEffect } from "react";
 import { LinkURLContext } from "../CONTEXT/LinkURLContext";
+import CV from "../../assets/EnemrockyCV.pdf";
 
 const Nav = () => {
 	const [showLinks, setShowLinks] = useState("hidden");
@@ -30,7 +31,7 @@ const Nav = () => {
 
 	return (
 		<nav className="shadow-lg">
-			<div className="flex content-center justify-between lg:w-4/5 mx-auto py-4  max-lg:hidden">
+			<div className="flex content-center justify-between lg:w-4/5 mx-auto py-4 max-lg:hidden">
 				<Link to="/" className="my-auto basis-1">
 					{logoURL ? (
 						<img
@@ -90,9 +91,11 @@ const Nav = () => {
 					</li>
 				</ul>
 				<div className="flex gap-4">
-					<button className="flex h-fit gap-2 font-semibold bg-green-400 text-white px-5 py-3 rounded-lg my-auto basis-1">
-						CV <FiDownload className="mt-1" />
-					</button>
+					<a href={CV} download="EnemrockyCV.pdf">
+						<button className="flex h-fit gap-2 font-semibold bg-green-400 text-white px-5 py-3 rounded-lg my-auto basis-1">
+							CV <FiDownload className="mt-1" />
+						</button>
+					</a>
 					{githubAvatarURL ? (
 						<NavLink to={githubURL} target="_blank">
 							<img
