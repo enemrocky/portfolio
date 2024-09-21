@@ -1,5 +1,5 @@
 import ContactForm from "./ContactForm";
-import Card from "../UI/ContactCard";
+import Card from "../UI/Card";
 
 const Contact = () => {
 	//form for feedback
