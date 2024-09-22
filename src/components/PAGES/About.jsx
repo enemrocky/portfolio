@@ -33,19 +33,19 @@ const About = () => {
 			<section className="my-16">
 				<div className="flex gap-10 mx-auto justify-between lg:px-48">
 					<div className="text-left w-1/2">
-						<p>HtML</p>
+						<p className="font-bold">HtML</p>
 						<div className="bg-red-100 rounded-md">
 							<div className="bg-red-400 w-11/12 h-3 mb-4 rounded-md"></div>
 						</div>
-						<p>CSS</p>
+						<p className="font-bold">CSS</p>
 						<div className="bg-blue-100 rounded-md">
 							<div className="bg-blue-400 w-11/12 h-3 mb-4 rounded-md"></div>
 						</div>
-						<p>JS</p>
+						<p className="font-bold">JS</p>
 						<div className="bg-blue-100 rounded-md">
 							<div className="bg-blue-400 w-10/12 h-3 mb-4 rounded-md"></div>
 						</div>
-						<p>React</p>
+						<p className="font-bold">React</p>
 						<div className="bg-green-100 rounded-md">
 							<div className="bg-green-400 w-7/12 h-3 rounded-md"></div>
 						</div>

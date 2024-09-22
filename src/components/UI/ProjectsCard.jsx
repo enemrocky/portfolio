@@ -6,7 +6,7 @@ const ProjectCard = (props) => {
 			{props.image ? (
 				<img
 					src={props.image}
-					className="h-40 w-full object-cover rounded-t-lg"
+					className="h-52 w-full object-cover rounded-t-lg"
 				/>
 			) : null}
 			<p className="uppercase font-medium text-center py-3 px-6">
