@@ -17,33 +17,33 @@ const Home = () => {
 					<h1 className="text-8xl">ENEMROCKY</h1>
 
 					{/* LINKS */}
-					<ul className="flex text-2xl m-auto align-center justify-center">
+					<ul className="flex text-3xl m-auto align-center justify-center">
 						<li className="text-gray-500 text-9xl ">
 							<IoRemoveOutline />
 						</li>
-						<div className="flex my-auto gap-3">
-							<li>
+						<ul className="flex my-auto gap-3">
+							<li className="p-2 rounded-full border-solid border-2 border-white">
 								<abbr title="LinkedIn">
 									<NavLink to={linkedInURL} target="_blank">
 										<FaLinkedin />
 									</NavLink>
 								</abbr>
 							</li>
-							<li>
+							<li className="p-2 rounded-full border-solid border-2 border-white">
 								<abbr title="Github">
 									<NavLink to={githubURL} target="_blank">
 										<FaGithub />
 									</NavLink>
 								</abbr>
 							</li>
-							<li>
+							<li className="p-2 rounded-full border-solid border-2 border-white">
 								<abbr title="Twitter">
 									<NavLink to={xTwitterURL} target="_blank">
 										<FaXTwitter />
 									</NavLink>
 								</abbr>
 							</li>
-						</div>
+						</ul>
 						<li className="text-gray-500 text-9xl">
 							<IoRemoveOutline />
 						</li>

@@ -2,19 +2,26 @@ import PropTypes from "prop-types";
 
 const ProjectCard = (props) => {
 	return (
-		<div className="shadow-md rounded-lg">
-			{props.image ? (
+		<div className="shadow-xl rounded-lg min-h-[450px]">
+			{props.imageSrc ? (
 				<img
-					src={props.image}
-					className="h-52 w-full object-cover rounded-t-lg"
+					src={props.imageSrc}
+					className="h-52 w-full object-cover rounded-t-lg border-b-2 border-gray-200"
 				/>
 			) : null}
-			<p className="uppercase font-medium text-center py-3 px-6">
+			<p className="uppercase font-semibold text-center py-3 px-6 mt-3">
 				{props.title}
 			</p>
-			<div className="text-green-500 text-center pb-5 px-2">
-				{props.body}
+			<div className="w-fit mx-auto pb-3 flex gap-3">
+				{props.techStack.map((tech, index) => (
+					<span
+						className="bg-green-500 px-2 py-1 text-white rounded-xl"
+						key={index}>
+						{tech}
+					</span>
+				))}
 			</div>
+			<div className="text-center pb-5 px-4">{props.body}</div>
 		</div>
 	);
 };
@@ -24,5 +31,6 @@ export default ProjectCard;
 ProjectCard.propTypes = {
 	title: PropTypes.string.isRequired,
 	body: PropTypes.string.isRequired,
-	image: PropTypes.string.isRequired,
+	imageSrc: PropTypes.string.isRequired,
+	techStack: PropTypes.checkPropTypes.isRequired,
 };

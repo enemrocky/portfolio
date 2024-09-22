@@ -43,7 +43,7 @@ const Nav = () => {
 						<p className="text-xl">ENEMROCKY</p>
 					)}
 				</Link>
-				<ul className="flex font-semibold uppercase gap-5 text-lg my-auto">
+				<ul className="flex font-medium uppercase gap-5 text-lg my-auto">
 					<li>
 						<NavLink
 							to="/"
