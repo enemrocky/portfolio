@@ -10,7 +10,7 @@ const About = () => {
 			<h3 className="text-xl lg:text-3xl font-semibold">
 				Software Engineer / Web Developer
 			</h3>
-			<p className="w-3/5 lg:text-xl mx-auto mt-3 mb-3 lg:mb-8">
+			<p className="w-4/5 lg:w-3/5 lg:text-xl mx-auto mt-3 mb-3 lg:mb-8">
 				Diligent software engineer with heavy focus on front-end modules
 				and processes. Builds beautiful and functional sites using
 				modern technologies like ReactJS, Tailwind, Html & CSS.
