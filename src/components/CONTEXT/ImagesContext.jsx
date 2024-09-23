@@ -1,5 +1,8 @@
-import { ImagesContext } from "./ImagesContext";
+// import { ImagesContext } from "./ImagesContext";
 import PropTypes from "prop-types";
+import { createContext } from "react";
+
+export const ImagesContext = createContext();
 
 export const ImagesContextProvider = ({ children }) => {
 	const languagesImage = [

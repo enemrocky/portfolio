@@ -8,7 +8,6 @@ const Nav = () => {
 	const [showLinks, setShowLinks] = useState("hidden");
 	const { githubAvatarURL, githubURL, logoURL } = useContext(LinkURLContext);
 
-	// TODO: if showlinks is active then any click on the page show set it to hidden
 	// show or hide navlinks on mobile
 	const handleClick = (event) => {
 		event.stopPropagation();
@@ -30,15 +29,11 @@ const Nav = () => {
 	}, [showLinks]);
 
 	return (
-		<nav className="shadow-lg">
+		<nav className="shadow-lg transition-all ease-out">
 			<div className="flex content-center justify-between lg:w-4/5 mx-auto py-4 max-lg:hidden">
 				<Link to="/" className="my-auto basis-1">
 					{logoURL ? (
-						<img
-							className="h-18 w-32"
-							//TODO: put logo url in context
-							src={logoURL}
-						/>
+						<img className="h-18 w-32" src={logoURL} />
 					) : (
 						<p className="text-xl">ENEMROCKY</p>
 					)}
@@ -108,17 +103,13 @@ const Nav = () => {
 			</div>
 
 			{/* mobile view */}
-			<div className="lg:hidden p-6">
+			<div className="lg:hidden flex flex-col p-4 lg:p-6">
 				<div className="flex content-center justify-between">
 					<Link to="/">
 						{logoURL ? (
-							<img
-								className="h-18 w-32"
-								//TODO: put logo url in context
-								src={logoURL}
-							/>
+							<img className="h-18 w-32" src={logoURL} />
 						) : (
-							<p className="text-xl">ENEMROCKY</p>
+							<p className="text-lg">ENEMROCKY</p>
 						)}
 					</Link>
 					<div onClick={handleClick}>
@@ -137,7 +128,7 @@ const Nav = () => {
 					</div>
 				</div>
 				<ul
-					className={`flex ${showLinks} flex-col text-gray-600 ms-2 font-semibold uppercase gap-3 py-8 text-lg"`}>
+					className={`flex ${showLinks} text-center flex-col text-gray-800 mx-auto font-semibold uppercase gap-4 py-8 text-lg"`}>
 					<li>
 						<NavLink to="/">Home</NavLink>
 					</li>
@@ -145,13 +136,20 @@ const Nav = () => {
 						<NavLink to="/about">About</NavLink>
 					</li>
 					<li>
-						<NavLink to="/contact">Contact</NavLink>
+						<NavLink to="/Projects">Projects</NavLink>
 					</li>
 					<li>
 						<NavLink to="/Github">Github Preview</NavLink>
 					</li>
 					<li>
-						<NavLink to="/Projects">Projects</NavLink>
+						<NavLink to="/contact">Contact</NavLink>
+					</li>
+					<li>
+						<a href={CV} download="EnemrockyCV.pdf">
+							<button className="flex h-fit gap-2 font-semibold bg-green-400 text-white mt-3 px-5 py-2 lg:py-3 rounded-lg mx-auto basis-1">
+								CV <FiDownload className="mt-1" />
+							</button>
+						</a>
 					</li>
 				</ul>
 			</div>

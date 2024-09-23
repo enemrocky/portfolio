@@ -1,6 +1,10 @@
-import { LinkURLContext } from "./LinkURLContext";
+// import { LinkURLContext } from "./LinkURLContext";
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
+
+import { createContext } from "react";
+
+export const LinkURLContext = createContext();
 
 export const LinkURLProvider = ({ children }) => {
 	useEffect(() => {

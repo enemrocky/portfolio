@@ -39,13 +39,13 @@ const ContactForm = () => {
 
 	return (
 		<form
-			className="flex flex-col w-4/5 lg:w-1/2 gap-3 mx-auto lg:mt-10 py-8 px-6 md:px-10 lg:px-16 rounded-xl shadow-lg"
+			className="flex flex-col w-4/5 lg:w-1/2 gap-3 mx-auto lg:mt-10 py-8 px-3 md:px-10 lg:px-16 rounded-xl shadow-lg"
 			onSubmit={handleSubmit}>
-			<h2 className="text-gray-600 text-2xl mb-8">
+			<h2 className="text-gray-600 text-xl lg:text-2xl mb-3 lg:mb-8">
 				Send your message through this form
 			</h2>
 			<div className="lg:flex justify-between gap-8">
-				<div className="lg:w-1/2 sm:mb-3">
+				<div className="lg:w-1/2 mb-3">
 					<label htmlFor="name">Name</label>
 					<input
 						type="text"
