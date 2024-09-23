@@ -11,7 +11,7 @@ const Home = () => {
 	return (
 		<>
 			<div className="flex flex-col h-[90vh] bg-showcase bg-no-repeat bg-cover justify-center text-white">
-				<div className="mx-auto -mt-20 font-semibold text-center">
+				<div className="mx-auto -mt-10 lg:-mt-20 font-semibold text-center">
 					<h1 className="text-5xl lg:text-8xl">ENEMROCKY</h1>
 
 					{/* LINKS */}
