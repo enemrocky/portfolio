@@ -63,6 +63,15 @@ export const projectData = [
 		techStack: ["Stack"],
 		srcURL: "https://enemrockycalculatorapp.netlify.app/",
 	},
+	{
+		title: "React E-commerce Application",
+		thumbnail:
+			"https://github.com/United-Programmers/Buy_and_sell_react/raw/main/public/screenshot/buyandsellreact.png",
+		description:
+			"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi placeat magnam eveniet accusamus tenetur maxime aspernatur deleniti rerum praesentium ducimus minima facilis consectetur expedita, mollitia molestias qui dolorem quam laudantium.",
+		techStack: ["Stack"],
+		srcURL: "http://buy-and-sell-react.vercel.app/",
+	},
 
 	// Add more objects for additional projectData here
 ];
