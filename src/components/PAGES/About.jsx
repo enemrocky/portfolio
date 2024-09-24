@@ -34,8 +34,8 @@ const About = () => {
 
 			{/* Bars section */}
 			<section className="my-8 lg:my-16">
-				<div className="flex flex-col lg:flex-row gap-10 mx-auto justify-between w-4/6 lg:w-full lg:px-48">
-					<div className="text-left lg:w-1/2">
+				<div className="flex flex-col lg:flex-row gap-10 mx-auto justify-between w-5/6 lg:w-full lg:px-48">
+					<div className="text-left lg:w-1/2 px-1">
 						<p className="font-bold">HtML</p>
 						<div className="bg-red-100 rounded-md">
 							<div className="bg-red-400 w-11/12 h-3 mb-4 rounded-md"></div>

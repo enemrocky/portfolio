@@ -11,12 +11,12 @@ const Home = () => {
 	return (
 		<>
 			<div className="flex flex-col h-[90vh] bg-showcase bg-no-repeat bg-cover justify-center text-white">
-				<div className="mx-auto -mt-10 lg:-mt-20 font-semibold text-center">
-					<h1 className="text-5xl lg:text-8xl">ENEMROCKY</h1>
+				<div className="flex flex-col gap-4 lg:gap-1 mx-auto -mt-10 lg:-mt-20 font-semibold text-center">
+					<h1 className="text-6xl lg:text-8xl">ENEMROCKY</h1>
 
 					{/* LINKS */}
-					<ul className="flex lg:text-3xl m-auto align-center justify-center">
-						<li className="text-gray-500 text-4xl lg:text-9xl ">
+					<ul className="flex text-xl lg:text-3xl m-auto align-center justify-center">
+						<li className="text-gray-200 text-4xl lg:text-9xl ">
 							<IoRemoveOutline />
 						</li>
 						<ul className="flex my-auto lg:gap-3">
@@ -42,7 +42,7 @@ const Home = () => {
 								</abbr>
 							</li>
 						</ul>
-						<li className="text-gray-500 text-4xl lg:text-9xl">
+						<li className="text-gray-200 text-4xl lg:text-9xl">
 							<IoRemoveOutline />
 						</li>
 					</ul>
@@ -55,3 +55,13 @@ const Home = () => {
 };
 
 export default Home;
+
+{
+	/* <video
+					width={"100%"}
+					height={"100%"}
+					className="-z-10"
+					src="https://videos.pexels.com/video-files/5453622/5453622-uhd_2560_1440_24fps.mp4"
+					autoPlay
+					loop></video> */
+}

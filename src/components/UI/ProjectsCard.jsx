@@ -12,14 +12,16 @@ const ProjectCard = (props) => {
 			<p className="uppercase font-semibold text-xl lg:text-base text-center py-3 px-6 mt-3">
 				{props.title}
 			</p>
-			<div className="w-11/12 pb-3 flex flex-wrap gap-0 lg:gap-3 mx-auto">
-				{props.techStack.map((tech, index) => (
-					<span
-						className="bg-green-500 px-2 text-sm lg:text-base py-1 mx-auto text-white rounded-xl"
-						key={index}>
-						{tech}
-					</span>
-				))}
+			<div className="w-11/12 pb-3 flex flex-wrap gap-0 mx-auto">
+				<div className="mx-auto">
+					{props.techStack.map((tech, index) => (
+						<span
+							className="bg-green-500 px-2 text-sm lg:text-base py-1 text-white rounded-xl mr-2"
+							key={index}>
+							{tech}
+						</span>
+					))}
+				</div>
 			</div>
 			<div className="text-center pb-5 px-4">{props.body}</div>
 		</div>

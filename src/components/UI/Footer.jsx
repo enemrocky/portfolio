@@ -11,7 +11,9 @@ const Footer = () => {
 		<footer className="border-solid border-t-2 border-gray-100 py-5 lg:py-8">
 			<div className="flex justify-between align-middle lg:w-4/5 mx-6 lg:mx-auto">
 				<Link to="/">
-					<p>All rights reserved, @ 2024 Enemrocky</p>
+					<p className="text-sm lg:text-base">
+						All rights reserved, &copy; 2024 Enemrocky
+					</p>
 				</Link>
 				<ul className="flex font-semibold gap-5 my-auto">
 					<li>

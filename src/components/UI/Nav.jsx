@@ -103,7 +103,7 @@ const Nav = () => {
 			</div>
 
 			{/* mobile view */}
-			<div className="lg:hidden flex flex-col p-4 lg:p-6">
+			<div className="lg:hidden flex flex-col p-5 lg:p-6">
 				<div className="flex content-center justify-between">
 					<Link to="/">
 						{logoURL ? (
