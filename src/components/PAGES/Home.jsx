@@ -12,7 +12,7 @@ const Home = () => {
 		<>
 			<div className="flex flex-col h-[90vh] bg-showcase bg-no-repeat bg-cover justify-center text-white">
 				<div className="flex flex-col gap-4 lg:gap-1 mx-auto -mt-10 lg:-mt-20 font-semibold text-center">
-					<h1 className="text-6xl lg:text-8xl">ENEMROCKY</h1>
+					<h1 className="text-5xl lg:text-8xl">ENEMROCKY</h1>
 
 					{/* LINKS */}
 					<ul className="flex text-xl lg:text-3xl m-auto align-center justify-center">
